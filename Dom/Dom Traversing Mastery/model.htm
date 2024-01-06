@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            padding: 14px 20px;
+            margin: 10px;
+        }
+
+        .overlay{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(0,0,0,.5);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        .popup{
+            width: 50%;
+            height: 50%;
+            background-color: wheat;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <button id="close">close</button>
+        </div>
+    </div>
+
+    <button id="open-model">open model</button>
+
+
+    <script>
+
+        // setTimeout(function(){
+        //     document.getElementById("overlay").style.display="flex";
+        // },5000)
+
+
+        document.getElementById('open-model').addEventListener
+        ("click",function(){
+            document.getElementById("overlay").style.display="flex";
+        })
+
+        document.getElementById('close').addEventListener
+        ("click",function(){
+            document.getElementById("overlay").style.display="none";
+        })
+    </script>
+    
+</body>
+</html>
