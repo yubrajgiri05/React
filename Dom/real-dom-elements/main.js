@@ -32,8 +32,16 @@ let pprice = document.createElement("h3");
 // pprice.innerText = products[0].price;
 pname.innerText = products[i].name;
 
+let btn = document.createElement("button");
+btn.innerText="buy";
+btn.addEventListener("click",function(){
+    console.log(products[i]);
+})
+
 a.appendChild(pname)
 a.appendChild(pprice)
+a.appendChild(btn)
 
 document.getElementsByClassName("parent")[0].appendChild(a);
+
 }
