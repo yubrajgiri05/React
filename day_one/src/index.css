@@ -15,3 +15,10 @@ html,body{
   display: flex;
   align-items: center;
 }
+.country{
+  width: fit-content;
+  padding: 20px;
+  background-color: lightblue;
+  margin: 10px;
+
+}

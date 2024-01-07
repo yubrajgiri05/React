@@ -1,0 +1,48 @@
+.product{
+  width: fit-content;
+  padding: 30px;
+  margin: 30px;
+  background: blueviolet;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+}
+.products{
+  width: 18%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+
+}
+.ptitle{
+  font-size: 20px;
+}
+.pdescription{
+  font-size: 18px;
+  color: white;
+}
+.imgg{
+  width: 100%;
+  height: 200px;
+}
+.creationAt{
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  overflow: hidden;
+}
+.updatedAt{
+  border: 1px solid blue;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  overflow: hidden;
+}
