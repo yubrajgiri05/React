@@ -1,0 +1,33 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 100%;
+}
+.nav-link{
+    cursor: pointer;
+}
+.nav-item > .nav-link{
+    font-size: 30px;
+    font-weight: 700;
+}
+.footer .nav-item .nav-link{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+.card .card-body .card-author{
+    padding: 5px 12px;
+    color: white;
+    background: #88121e;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    width: fit-content;
+}
+.footer .footer-about{
+    text-align: justify;
+}
