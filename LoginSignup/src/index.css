@@ -1,0 +1,87 @@
+.navbar{
+    background-color: red;
+}
+.position-absolute{
+    top: 8px;
+    right: 0;
+}
+
+.navbar-brand > img{
+    height: 50px;
+    width: 150px;
+}
+.nav-item> .nav-link{
+    font-size: 24px;
+    font-weight: 600;
+}
+.login{
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(220, 220, 20);
+    text-decoration: none;
+}
+
+.wapper{
+    background: rgb(28,23,110);
+    background: linear-gradient(90deg, rgba(28,23,110,1) 0%, rgba(70,144,121,0.7764355742296919) 66%, rgba(0,212,255,1) 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-wapper{
+background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(121,35,53,1) 100%);
+}
+.form-element{
+    padding: 20px 90px 10px;
+    background-color: white;
+}
+.log-action{
+    font-size: 28px;
+    font-weight: 800;
+    padding-bottom: 35px;
+}
+.input-box{
+    position: relative;
+    margin-bottom: 15px;
+}
+.input-box>.icon{
+    position: absolute;
+    top:18px;
+    left: 6px;
+    font-size: 22px;
+}
+.input-box > ::placeholder {
+    color: black;
+    opacity: 1;
+}
+.input-type{
+    border: none !important;
+    background-color: rgb(183, 175, 175);
+    padding: 15px 35px !important;
+}
+.input-type-signup{
+    background-color: white;
+    border: 1px solid rgb(66, 65, 65) !important;
+    border-radius: 8px !important;
+}
+.login-btn{
+    width: 100%;
+    padding: 8px;
+    color: white;
+    background-color: rgb(155, 51, 155);
+    border: 0;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 30px 0;
+}
+.signup-btn{
+    background-color: rgb(56, 146, 15);
+}
+.social-btn{
+    border: 1px solid black !important;
+    border-radius: 5px !important;
+}
