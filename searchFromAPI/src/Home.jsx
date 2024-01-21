@@ -12,19 +12,17 @@ const Home = () => {
         setRecords(data)
     })
 	.catch(err => console.error(err));
-
-        // fetch.get(`https://jsonplaceholder.typicode.com/users`)
-        // .then(res=> setData(res.Data))
-        // .catch(err=> console.log(err));
     },[])
+
     const Filter =(event) =>{
-        setRecords(data.filter(f=> f.name.toLowerCase().includes(event.target.value)))
+        setRecords(data.filter(f=> f.name.toLowerCase()
+        .includes(event.target.value)))
 
     }
   return (
     <>
       <div className="p-5">
-        <input type="text" className='form-control' onClick={Filter} placeholder='search data' />
+        <input type="text" className='form-control' onChange={Filter} placeholder='search data' />
         <table className='bg-success m-5'>
             <thead>
                 <tr className='bg-danger '>
