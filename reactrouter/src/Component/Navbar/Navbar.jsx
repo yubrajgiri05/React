@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({user, login, logout}) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+        <div className="container">
           <a className="navbar-brand" href="#">
             Navbar
           </a>
@@ -21,7 +21,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-0 mb-2 mb-lg-0 gap-4">
               <li className="nav-item">
                 <Link to={"/"} className="nav-link active" aria-current="page">
                   Home
@@ -31,18 +31,21 @@ const Navbar = () => {
                 <Link to={"/product"} className="nav-link">
                   PRODUCR
                 </Link>
-                <li className="nav-item">
-                  <Link to={"/product"} className="nav-link">
+              </li>
+              <li className="nav-item">
+                  <Link to={"/dasboard"} className="nav-link">
                     Dashboard
                   </Link>
                 </li>
-                <li className="nav-item">
-                 <button className="btn"> LOGIN</button>
+                {user ?
+                <li className="nav-item" onClick={logout}>
+                <button className="btn bg-danger nav-link px-3"> Logout</button>
+               </li>
+               :
+               <li className="nav-item" onClick={login}>
+                 <button className="btn bg-success nav-link px-3"> LOGIN</button>
                 </li>
-                <li className="nav-item">
-                 <button className="btn"> LOGOUT</button>
-                </li>
-              </li>
+              }
             </ul>
           </div>
         </div>
