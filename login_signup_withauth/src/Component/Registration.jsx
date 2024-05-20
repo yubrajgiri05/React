@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../Component/login.css"
 
 const Registration = () => {
   const [formdata, setFormData] = useState({
@@ -25,7 +26,7 @@ const Registration = () => {
       validationErrors.fname = "First name is required"
     }
     //lastname validation
-    if(formdata.lnamel === "" || formdata.lname === null){
+    if(formdata.lname === "" || formdata.lname === null){
       isvalid = false;
       validationErrors.lname = "Last name is required"
     }
@@ -65,32 +66,12 @@ const Registration = () => {
   }
   return (
     <>
-      <h2>Registration</h2>
-      <section className="p-3 p-md-4 p-xl-5">
+      <section className="form">
         <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-6 bsb-tpl-bg-lotion">
-              <div className="p-3 p-md-4 p-xl-5">
-                <div className="row">
-                  <div className="col-12">
-                    <div className="mb-5">
-                      <h2 className="h3">Registration</h2>
-                      <h3 className="fs-6 fw-normal text-secondary m-0">
-                        Enter your details to register
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                {
-                  valid ? <></>:
-                  <span className="text-danger">
-                    {errors.fname} {errors.lname} {errors.email} {errors.password} {errors.cpassword}
-                  </span>
-
-                }
-                <form onSubmit={handleSubmit}>
-                  <div className="row gy-3 gy-md-4 overflow-hidden">
-                    <div className="col-12">
+               
+                <form onSubmit={handleSubmit} className="form-class">
+                  <div className="d-flex flex-column gap-4">
+                    <div className="form-single">
                       <label htmlFor="firstName" className="form-label">
                         First Name <span className="text-danger">*</span>
                       </label>
@@ -102,8 +83,14 @@ const Registration = () => {
                         placeholder="First Name"
                         onChange={(event)=> setFormData({...formdata, fname: event.target.value})}
                       />
+                       {
+                  valid ? <></>:
+                  <span className="text-danger">
+                    {errors.fname}
+                  </span>
+                }
                     </div>
-                    <div className="col-12">
+                    <div className="form-single">
                       <label htmlFor="lastName" className="form-label">
                         Last Name <span className="text-danger">*</span>
                       </label>
@@ -115,8 +102,14 @@ const Registration = () => {
                         placeholder="Last Name"
                         onChange={(event)=> setFormData({...formdata, lname: event.target.value})}
                       />
+                         {
+                  valid ? <></>:
+                  <span className="text-danger">
+                    {errors.lname}
+                  </span>
+                }
                     </div>
-                    <div className="col-12">
+                    <div className="form-single">
                       <label htmlFor="email" className="form-label">
                         Email <span className="text-danger">*</span>
                       </label>
@@ -128,8 +121,14 @@ const Registration = () => {
                         placeholder="name@example.com"
                         onChange={(event)=> setFormData({...formdata, email: event.target.value})}
                       />
+                         {
+                  valid ? <></>:
+                  <span className="text-danger">
+                    {errors.email}
+                  </span>
+                }
                     </div>
-                    <div className="col-12">
+                    <div className="form-single">
                       <label htmlFor="password" className="form-label">
                         Password <span className="text-danger">*</span>
                       </label>
@@ -140,8 +139,14 @@ const Registration = () => {
                         id="password"
                         onChange={(event)=> setFormData({...formdata, password: event.target.value})}
                       />
+                         {
+                  valid ? <></>:
+                  <span className="text-danger">
+                    {errors.password}
+                  </span>
+                }
                     </div>
-                    <div className="col-12">
+                    <div className="form-single">
                       <label htmlFor="cpassword" className="form-label">
                         Re Enter Password <span className="text-danger">*</span>
                       </label>
@@ -152,23 +157,25 @@ const Registration = () => {
                         id="cpassword"
                         onChange={(event)=> setFormData({...formdata, cpassword: event.target.value})}
                       />
+                         {
+                  valid ? <></>:
+                  <span className="text-danger">
+                    {errors.cpassword}
+                  </span>
+                }
                     </div>
-                    <div className="col-12">
-                      <div className="d-grid">
+                    <div className="form-single text-center">
                         <button
                           className="btn bsb-btn-xl btn-primary"
                           type="submit"
                         >
                           Sign up
                         </button>
-                      </div>
                     </div>
                   </div>
                 </form>
-                <div className="row">
-                  <div className="col-12">
-                    <hr className="mt-5 mb-4 border-secondary-subtle" />
-                    <p className=" text-secondary text-end">
+                <div className="already">
+                <p className=" text-center">
                       Already have an account?{" "}
                       <Link
                         to="/login"
@@ -177,12 +184,8 @@ const Registration = () => {
                         Sign in
                       </Link>
                     </p>
-                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
     </>
   );

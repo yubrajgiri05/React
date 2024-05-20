@@ -1,28 +1,12 @@
 {
   "users": [
     {
-      "id": "d2b5",
+      "id": "41ad",
       "fname": "Yubraj",
       "lname": "Giri",
       "email": "giriyubraj787898@gmail.com",
-      "password": "asdfgh",
-      "cpassword": "asdfgh"
-    },
-    {
-      "id": "6fb3",
-      "fname": "Yubraj",
-      "lname": "Giri",
-      "email": "giriyubraj787898@gmail.com",
-      "password": "787898",
-      "cpassword": "787898"
-    },
-    {
-      "id": "f67d",
-      "fname": "Yubraj",
-      "lname": "Giri",
-      "email": "giriyubraj787898@gmail.com",
-      "password": "000000",
-      "cpassword": "000000"
+      "password": "111111",
+      "cpassword": "111111"
     }
   ]
 }
